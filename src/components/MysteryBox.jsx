@@ -2,15 +2,24 @@ import { motion } from 'framer-motion'
 import Particles from 'react-particles'
 import { loadFull } from 'tsparticles'
 import { useCallback } from 'react'
+import { useAudio } from '../contexts/AudioContext'
 
 const MysteryBox = ({ onClick }) => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine)
   }, [])
   
+  const { playSound } = useAudio()
+  
   const handleGiftClick = () => {
-    // Go directly to main page
-    onClick()
+    // Play scream sound before transitioning to main page
+    playSound('/music/scream.mp3', 0.7)
+    
+    // Small delay to let the scream sound start before transition
+    setTimeout(() => {
+      // Go to main page
+      onClick()
+    }, 300)
   }
 
   const boxVariants = {
