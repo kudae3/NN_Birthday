@@ -2,30 +2,35 @@ import { motion } from 'framer-motion'
 
 const memoriesData = [
   {
-    title: "Our first hiking trip",
-    date: "May 2022",
-    description: "Remember when we got lost and found that amazing waterfall?"
+    title: "Birthday Girl",
+    date: "March 29th, 2025",
+    description: "Celebrating another year of your amazing journey. Have a great year! 🎉",
+    image: "/nn.jpeg"
   },
   {
-    title: "Birthday surprise last year",
-    date: "Your birthday 2023",
-    description: "Your reaction when we all jumped out was priceless!"
-  },
-  {
-    title: "Road trip adventures",
-    date: "Summer 2023",
-    description: "Three cities, countless laughs, and too many photos to count."
+    title: "Birthday surprise From you",
+    date: "My Birthday 2023",
+    description: "Your birthday gift was amazing! I love that so much. 🎁",
+    image: "/kudae.jpg"
+
   },
   {
     title: "Late night conversations",
     date: "Always",
-    description: "The deep talks that strengthen our friendship every time."
+    description: "The deep talks that strengthen our friendship every time. 👻",
+    image: "/talk.jpg"
+  },
+  {
+    title: "Film Recommender",
+    date: "Always",
+    description: "This is me suggesting you to watch Game of Thrones, even though we never will. 😂",
+    image: "/funny.gif"
   }
 ]
 
 const Memories = () => {
   return (
-    <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
+    <div className="max-w-sm sm:max-w-md md:max-w-4xl mx-auto px-4">
       <h2 className="text-2xl font-bold text-birthday-pink-500 mb-6 sm:mb-8 text-center">Our Beautiful Memories</h2>
       
       <div className="relative">
@@ -44,10 +49,10 @@ const Memories = () => {
                 index % 2 === 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
-              <div className="md:w-1/2 flex justify-center md:justify-end items-center">
+              <div className="md:w-1/2 flex justify-center items-center">
                 <div className="w-full max-w-[180px] sm:w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 bg-gray-200 rounded-xl overflow-hidden relative shadow-lg">
                   <div className="absolute inset-0 flex items-center justify-center text-white text-5xl sm:text-6xl bg-birthday-pink-400 bg-opacity-40">
-                    📷
+                    <img src={memory.image} alt="" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-3 sm:p-4">
                     <p className="text-white text-sm sm:text-base font-medium">{memory.date}</p>
@@ -57,7 +62,7 @@ const Memories = () => {
               
               <div className="md:w-1/2 flex flex-col justify-center relative">
                 {/* Timeline dot - hidden on mobile */}
-                <div className="absolute left-0 md:left-0 top-0 md:top-1/2 transform md:-translate-y-1/2 md:-translate-x-1/2 w-4 sm:w-6 h-4 sm:h-6 rounded-full bg-birthday-pink-500 shadow-lg z-10 hidden sm:block"></div>
+                <div className="absolute left-0 md:left-0 top-0 md:top-1/2 transform md:-translate-y-1/2 md:-translate-x-1/2 w-4 sm:w-6 h-4 sm:h-6 rounded-full bg-birthday-pink-500 shadow-lg z-10 hidden md:block"></div>
                 
                 <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg sm:ml-8 md:ml-0 mt-3 sm:mt-0">
                   <h3 className="text-lg sm:text-xl font-bold text-birthday-pink-500 mb-2">{memory.title}</h3>
@@ -75,10 +80,7 @@ const Memories = () => {
         transition={{ delay: 0.8 }}
         className="mt-12 sm:mt-16 text-center"
       >
-        <p className="text-base sm:text-lg text-birthday-pink-400 font-medium mb-4">Here's to making many more memories together!</p>
-        <button className="bg-birthday-pink-400 hover:bg-birthday-pink-500 text-white font-bold py-2 px-4 sm:py-2 sm:px-6 rounded-full shadow-md transition-colors">
-          Share a Memory
-        </button>
+        <p className="text-base sm:text-lg text-birthday-pink-400 font-medium">Let's make many more memories together!</p>
       </motion.div>
     </div>
   )

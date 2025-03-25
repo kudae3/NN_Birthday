@@ -76,7 +76,10 @@ const BirthdayContent = () => {
 
       {/* Footer */}
       <footer className="py-6 text-center text-birthday-pink-400 border-t border-birthday-pink-200">
-        <p>Made with ❤️ just for you by Kudae!</p>
+        <p>Made with ❤️ just for you by 
+        <a href="http://" target="_blank" rel="noopener noreferrer"> <span className='underline hover:text-birthday-pink-600 duration-300'>Kudae</span></a>
+        !
+        </p>
         <span className="text-xs block mt-2 text-gray-500">Music credits: All songs used belong to their respective artists and copyright holders.</span>
       </footer>
     </div>
