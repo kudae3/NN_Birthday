@@ -1,32 +1,38 @@
-import { motion } from 'framer-motion'
+import { m, motion } from 'framer-motion'
 
 const memoriesData = [
   {
-    title: "Birthday Girl",
+    title: "Birthday Girl 🎉",
     date: "March 29th, 2025",
-    description: "Celebrating another year of your amazing journey. Have a great year! 🎉",
+    description: "Another year, another level unlocked! Have the best year ever! 🎂✨",
     image: "/nn.jpeg"
   },
   {
-    title: "Birthday surprise From you",
+    title: "Birthday Surprise from You 🎁",
     date: "My Birthday 2023",
-    description: "Your birthday gift was amazing! I love that so much. 🎁",
+    description: "Your gift? Perfect. My reaction? Over the moon! Loved it so much! 💖",
     image: "/kudae.jpg"
-
   },
   {
-    title: "Late night conversations",
+    title: "Real Friends or Reel Friends? 🎥",
     date: "Always",
-    description: "The deep talks that strengthen our friendship every time. 👻",
+    description: "Who needs words when reels say it all? Communication level: unlocked. ✌️😆",
+    image: "/reels.jpg"
+  },
+  {
+    title: "Late-Night Conversations 🌙",
+    date: "Always",
+    description: "The deep talks that strengthen our friendship every time. Deep talk? Yeah, deep talk. 🤫",
     image: "/talk.jpg"
   },
   {
-    title: "Film Recommender",
+    title: "Film Recommender 🎬",
     date: "Always",
-    description: "This is me suggesting you to watch Game of Thrones, even though you never will. 😂",
+    description: `This is me suggesting you watch "Game of Thrones", even though you never will. 😂 I won't stop anyway. 😎`,
     image: "/funny.gif"
   }
 ]
+
 
 const Memories = () => {
   return (

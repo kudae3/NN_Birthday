@@ -158,7 +158,7 @@ const MysteryBox = ({ onClick }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            Click to see your birthday surprise!
+            Hey, I have something for you!
           </motion.div>
         </div>
       </motion.div>
