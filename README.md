@@ -2,8 +2,6 @@
 
 An interactive and personalized birthday celebration web application built with React and TailwindCSS. This project creates a delightful, animated birthday experience with custom music, animations, and personalized content.
 
-![Birthday Project Preview](/public/nn.jpeg)
-
 ## Features
 
 - 🎁 Interactive gift box opening animation
