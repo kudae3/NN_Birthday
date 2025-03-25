@@ -50,7 +50,7 @@ function AppContent() {
   }, [pauseMusic])
 
   return (
-    <>
+    <div className="relative">
       <AnimatePresence>
         {showMysteryBox && (
           <motion.div 
@@ -74,18 +74,20 @@ function AppContent() {
       )}
 
       {showConfetti && (
-        <Confetti
-          width={width}
-          height={height}
-          recycle={false}
-          numberOfPieces={500}
-          colors={['#ff9cd4', '#ff69c0', '#ff3aac', '#ff0096', '#ffcce8']}
-        />
+        <div className="fixed inset-0 pointer-events-none z-20">
+          <Confetti
+            width={width}
+            height={height}
+            recycle={false}
+            numberOfPieces={500}
+            colors={['#ff9cd4', '#ff69c0', '#ff3aac', '#ff0096', '#ffcce8']}
+          />
+        </div>
       )}
       
       {/* Audio controller button */}
       <AudioController />
-    </>
+    </div>
   )
 }
 

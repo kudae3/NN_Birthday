@@ -15,14 +15,12 @@ const BirthdayContent = () => {
     await loadFull(engine)
   }, [])
   
-  // Update music when tab changes
+  // Update music when component mounts - play background music only
   useEffect(() => {
-    if (activeTab === 'memories') {
-      changeMusic('/music/22.mp3')
-    } else {
-      changeMusic('/music/background.mp3')
-    }
-  }, [activeTab, changeMusic])
+    // Always use background music
+    changeMusic('/music/background.mp3')
+    // The dependency array is empty so this only runs once when component mounts
+  }, [changeMusic])
   
   const handleTabChange = (tab) => {
     // Play tab change sound
@@ -144,10 +142,9 @@ const BirthdayContent = () => {
         {/* Footer */}
         <footer className="py-6 text-center text-birthday-pink-400 border-t border-birthday-pink-200">
           <p>Made with ❤️ just for you by 
-          <a href="http://" target="_blank" rel="noopener noreferrer"> <span className='underline hover:text-birthday-pink-600 duration-300'>Kudae</span></a>
+          <a href="https://www.facebook.com/emilnowak99/" target="_blank" rel="noopener noreferrer"> <span className='underline hover:text-birthday-pink-600 duration-300'>Kudae</span></a>
           !
           </p>
-          <span className="text-xs block mt-2 text-gray-500">Music credits: All songs used belong to their respective artists and copyright holders.</span>
         </footer>
       </div>
     </div>
