@@ -34,7 +34,7 @@ const BirthdayCard = () => {
             }}
             className="text-4xl sm:text-5xl"
           >
-            🎂
+            <img src="/birthday.png" alt="Birthday icon" />
           </motion.div>
         </motion.div>
       </div>
