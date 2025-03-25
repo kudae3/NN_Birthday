@@ -23,7 +23,7 @@ const memoriesData = [
   {
     title: "Film Recommender",
     date: "Always",
-    description: "This is me suggesting you to watch Game of Thrones, even though we never will. 😂",
+    description: "This is me suggesting you to watch Game of Thrones, even though you never will. 😂",
     image: "/funny.gif"
   }
 ]
@@ -35,7 +35,7 @@ const Memories = () => {
       
       <div className="relative">
         {/* Timeline line - hidden on small mobile */}
-        <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-birthday-pink-300 hidden sm:block"></div>
+        <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-birthday-pink-300 hidden md:block"></div>
         
         {/* Memory items */}
         <div className="space-y-8 sm:space-y-12">
@@ -61,8 +61,14 @@ const Memories = () => {
               </div>
               
               <div className="md:w-1/2 flex flex-col justify-center relative">
+                
                 {/* Timeline dot - hidden on mobile */}
-                <div className="absolute left-0 md:left-0 top-0 md:top-1/2 transform md:-translate-y-1/2 md:-translate-x-1/2 w-4 sm:w-6 h-4 sm:h-6 rounded-full bg-birthday-pink-500 shadow-lg z-10 hidden md:block"></div>
+                <div className="absolute left-0 md:left-0 top-0 md:top-1/2 transform md:-translate-y-1/2 md:-translate-x-1/2 w-4 sm:w-6 h-4 sm:h-6 rounded-full shadow-lg z-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 font-bold text-pink-600 p-1">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                  </svg>
+
+                </div>
                 
                 <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg sm:ml-8 md:ml-0 mt-3 sm:mt-0">
                   <h3 className="text-lg sm:text-xl font-bold text-birthday-pink-500 mb-2">{memory.title}</h3>

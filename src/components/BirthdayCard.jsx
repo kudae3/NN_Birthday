@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const BirthdayCard = () => {
   return (
     <motion.div 
-      className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl card-3d"
+      className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl card-3d relative"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -13,30 +13,26 @@ const BirthdayCard = () => {
         transition: 'transform 0.5s ease, box-shadow 0.5s ease'
       }}
     >
-      <div className="bg-birthday-pink-300 h-28 sm:h-40 flex items-center justify-center">
+      
+      {/* Container for the girl.gif image with proper positioning */}
+      <div className="flex items-center justify-center bg-pink-100 py-4 relative overflow-hidden">
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            delay: 0.1
-          }}
-          className="bg-white rounded-full p-4 sm:p-6 shadow-lg"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="relative z-10"
         >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ 
-              duration: 20, 
-              repeat: Infinity, 
-              ease: "linear" 
-            }}
-            className="text-4xl sm:text-5xl"
-          >
-            <img src="/birthday.png" alt="Birthday icon" />
-          </motion.div>
+          <img 
+            className="h-36 sm:h-44 object-contain" 
+            src="/girl.gif" 
+            alt="Birthday Girl" 
+          />
         </motion.div>
+        
+        {/* Decorative elements behind the image */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-10">
+          <div className="w-48 h-48 rounded-full bg-pink-300"></div>
+        </div>
       </div>
       
       <div className="p-4 sm:p-8 text-center">
@@ -69,9 +65,19 @@ const BirthdayCard = () => {
             Wishing you endless blessings and beautiful moments ahead.
           </p>
           
-          <p className="text-birthday-pink-400 font-bold">
+          <motion.p 
+            className="text-xl font-bold mt-6"
+            animate={{ 
+              color: ['#ff7eb6', '#ff3aac', '#ff0096', '#ff3aac', '#ff7eb6'],
+              scale: [1, 1.05, 1]
+            }}
+            transition={{ 
+              color: { duration: 3, repeat: Infinity },
+              scale: { duration: 2, repeat: Infinity }
+            }}
+          >
             Happy Birthday! 🎉
-          </p>
+          </motion.p>
         </motion.div>
         
         <motion.div 
@@ -85,6 +91,7 @@ const BirthdayCard = () => {
             delay: 0.7
           }}
         >
+          <div className="h-1 w-24 bg-gradient-to-r from-transparent via-birthday-pink-300 to-transparent"></div>
         </motion.div>
       </div>
     </motion.div>
