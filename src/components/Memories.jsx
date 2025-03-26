@@ -22,17 +22,28 @@ const memoriesData = [
   {
     title: "Late-Night Conversations 🌙",
     date: "Always",
-    description: "The deep talks that strengthen our friendship every time. Deep talk? Yeah, deep talk. 🤫",
+    description: "The deep talks that strengthen our friendship every time. Deep talk? Yeah, deep talk. 😆🤫",
     image: "/talk.jpg"
   },
   {
     title: "Film Recommender 🎬",
     date: "Always",
-    description: `This is me suggesting you watch "Game of Thrones", even though you never will. 😂 I won't stop anyway. 😎`,
+    description: `This is me suggesting you watch "Game of Thrones," even though you never will. 😂 I won't stop anyway. 😎`,
     image: "/funny.gif"
+  },
+  {
+    title: "Generous Sharer 🤭",
+    date: "Always",
+    description: `You are the most generous person I have ever met, haha 🤣. Sharing is caring, right? Keep doing it, my fri. 😂`,
+    image: "/chat.jpg"
+  },
+  {
+    title: "Joke Explainer 😩",
+    date: "Always",
+    description: "Me, after explaining the funny joke I sent you, but you still don't get it. 😭",
+    image: "/cry.gif"
   }
 ]
-
 
 const Memories = () => {
   return (
@@ -92,7 +103,12 @@ const Memories = () => {
         transition={{ delay: 0.8 }}
         className="mt-12 sm:mt-16 text-center"
       >
-        <p className="text-base sm:text-lg text-birthday-pink-400 font-medium">Let's make many more memories together!</p>
+        <p className="text-base sm:text-lg text-birthday-pink-400 font-medium"> 
+          Happy Birthday, my dear friend! 🎉🎂 <br/><br/>
+          Thank you for being by my side for over a decade—through every high and low, every moment of joy and struggle. Your unwavering support, positivity, and ability to listen without judgment mean the world to me. Talking to you feels like a safe space where all worries fade away, and I hope you feel the same with me.<br/>
+          Here's to many more years of laughter, memories, and friendship. Wishing this year filled with love, happiness, and everything your heart desires!<br/><br/>
+          Cheers to you! 🥂💖
+        </p>
       </motion.div>
     </div>
   )
