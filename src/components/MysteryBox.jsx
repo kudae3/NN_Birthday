@@ -12,14 +12,8 @@ const MysteryBox = ({ onClick }) => {
   const { playSound } = useAudio()
   
   const handleGiftClick = () => {
-    // Play scream sound before transitioning to main page
-    playSound('/music/scream.mp3', 0.7)
-    
-    // Small delay to let the scream sound start before transition
-    setTimeout(() => {
-      // Go to main page
-      onClick()
-    }, 300)
+    // Directly call onClick without playing sound here
+    onClick()
   }
 
   const boxVariants = {
@@ -40,7 +34,7 @@ const MysteryBox = ({ onClick }) => {
       scale: [0.8, 1.2, 0.8],
       opacity: [0.4, 1, 0.4],
       transition: {
-        duration: 2,
+        duration: 4,
         repeat: Infinity,
         ease: "easeInOut"
       }
