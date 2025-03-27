@@ -124,7 +124,7 @@ const Memories = () => {
         transition={{ delay: 0.8 }}
         className="mt-12 sm:mt-16"
       >
-        <p className="text-base sm:text-lg text-birthday-pink-400"> 
+        <p className="text-base sm:text-lg text-birthday-pink-400 font-['Merienda'] leading-relaxed"> 
           Happy Birthday, my dear friend! 🎉🎂<br/><br />
           Thank you for being by my side for over a decade, through every high and low, every moment of joy and struggle. You've stood by me on my darkest days and always found me when I tried to run away from others. Your unwavering support and positivity mean the world to me.
           Talking to you feels like a safe space where all worries fade away, and I hope you feel the same with me.<br/>
