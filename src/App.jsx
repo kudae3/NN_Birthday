@@ -21,7 +21,7 @@ function AppContent() {
   const [showMysteryBox, setShowMysteryBox] = useState(true)
   const [showConfetti, setShowConfetti] = useState(false)
   const { width, height } = useWindowSize()
-  const { playMusic, pauseMusic } = useAudio()
+  const { playMusic, pauseMusic, playSound } = useAudio()
 
   const handleBoxClick = () => { 
     setShowConfetti(true)
@@ -30,6 +30,12 @@ function AppContent() {
       setShowMysteryBox(false)
       // Start background music when the birthday content is shown
       playMusic()
+      
+      // Play scream sound when the main content is about to be shown
+      // Small delay to ensure the main content is being mounted
+      setTimeout(() => {
+        playSound('/music/scream.mp3', 0.7)
+      }, 300)
     }, 500)
   }
 
