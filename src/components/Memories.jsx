@@ -73,7 +73,7 @@ const Memories = () => {
               }`}
             >
               <div className="md:w-1/2 flex justify-center items-center">
-                <div className="w-full max-w-[180px] sm:w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 bg-gray-200 rounded-xl overflow-hidden relative shadow-lg">
+                <div className="w-full max-w-[180px] w-64 h-64 bg-gray-200 rounded-xl overflow-hidden relative shadow-lg">
                   <div className="absolute inset-0 flex items-center justify-center text-white text-5xl sm:text-6xl bg-birthday-pink-400 bg-opacity-40">
                     <img src={memory.image} alt="" />
                   </div>
@@ -122,11 +122,12 @@ const Memories = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8 }}
-        className="mt-12 sm:mt-16 text-center"
+        className="mt-12 sm:mt-16"
       >
-        <p className="text-base sm:text-lg text-birthday-pink-400 font-medium"> 
-          Happy Birthday, my dear friend! 🎉🎂 <br/><br/>
-          Thank you for being by my side for over a decade—through every high and low, every moment of joy and struggle. Your unwavering support, positivity, and ability to listen without judgment mean the world to me. Talking to you feels like a safe space where all worries fade away, and I hope you feel the same with me.<br/>
+        <p className="text-base sm:text-lg text-birthday-pink-400"> 
+          Happy Birthday, my dear friend! 🎉🎂<br/><br />
+          Thank you for being by my side for over a decade, through every high and low, every moment of joy and struggle. You've stood by me on my darkest days and always found me when I tried to run away from others. Your unwavering support and positivity mean the world to me.
+          Talking to you feels like a safe space where all worries fade away, and I hope you feel the same with me.<br/>
           Here's to many more years of laughter, memories, and friendship. Wishing this year filled with love, happiness, and everything your heart desires!<br/><br/>
           Cheers to you! 🥂💖
         </p>
