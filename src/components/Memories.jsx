@@ -14,8 +14,8 @@ const memoriesData = [
     image: "/kudae.jpg"
   },
   {
-    title: "Real Friends or Reel Friends? 🎥",
-    date: "Always",
+    title: "Real Friends or Reel Friends? 🎶",
+    date: "March 14th, 2025",
     description: "Who needs words when reels say it all? Communication level: unlocked. ✌️😆",
     image: "/reels.jpg"
   },
@@ -33,7 +33,7 @@ const memoriesData = [
   },
   {
     title: "Generous Sharer 🤭",
-    date: "Always",
+    date: "March 6th, 2025",
     description: `You are the most generous person I have ever met, haha 🤣. Sharing is caring, right? Keep doing it, my fri. 😂`,
     image: "/chat.jpg"
   },
@@ -42,6 +42,12 @@ const memoriesData = [
     date: "Always",
     description: "Me, after explaining the funny joke I sent you, but you still don't get it. 😭",
     image: "/cry.gif"
+  },
+  {
+    title: "Blame Game 😂",
+    date: "Always",
+    description: "Two moods at the same time? Nah, I have three. 😎",
+    image: "/blame.jpg"
   }
 ]
 
@@ -87,9 +93,24 @@ const Memories = () => {
 
                 </div>
                 
-                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg sm:ml-8 md:ml-0 mt-3 sm:mt-0">
-                  <h3 className="text-lg sm:text-xl font-bold text-birthday-pink-500 mb-2">{memory.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600">{memory.description}</p>
+                <div className="relative bg-white p-5 sm:p-6 rounded-xl shadow-lg sm:ml-8 md:ml-0 mt-3 sm:mt-0 border border-pink-100 hover:border-pink-200 transition-all duration-300 overflow-hidden group">
+                  {/* Ribbon decoration */}
+                  <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden">
+                    <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 rotate-45 bg-gradient-to-r from-birthday-pink-300 to-birthday-pink-500 text-white text-xs font-semibold py-1 w-32 text-center shadow-md">
+                      memory
+                    </div>
+                  </div>
+                  
+                  {/* Main content with nice border effect */}
+                    <div className="bg-white rounded-md">
+                      <h3 className="text-lg sm:text-xl font-semibold text-birthday-pink-500 mb-3 flex items-center">
+                        <span className="inline-block w-2 h-8 mr-2 bg-gradient-to-b from-birthday-pink-300 to-birthday-pink-500 rounded-full"></span>
+                        {memory.title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed pl-4 border-l-2 border-dashed border-birthday-pink-200 ml-1">
+                        {memory.description}
+                      </p>
+                    </div>
                 </div>
               </div>
             </motion.div>
